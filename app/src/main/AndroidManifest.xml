@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TestLR">
+        <activity
+            android:name="com.johnri.labRatStudyCards.ui.intro.introActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.TestLR">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.johnri.labRatStudyCards.ui.auth.logInActivity"/>
+        <activity android:name="com.johnri.labRatStudyCards.ui.auth.signUpActivity"/>
+        <activity android:name="com.johnri.labRatStudyCards.ui.main.MainActivity"/>
+        <activity android:name="com.johnri.labRatStudyCards.ui.home.homeActivity"/>
+        <activity android:name="com.johnri.labRatStudyCards.ui.chapters.chapterActivity"/>
+        <activity android:name="com.johnri.labRatStudyCards.ui.study.studyActivity"/>
+        <activity android:name="com.johnri.labRatStudyCards.ui.cards.addCardActivity" />
+        <activity android:name="com.johnri.labRatStudyCards.ui.profile.profileActivity" />
+        <activity android:name="com.johnri.labRatStudyCards.ui.quickstudy.quickStudyActivity"/>
+        <activity android:name="com.johnri.labRatStudyCards.ui.decks.importDeckActivity"/>
+        <activity android:name="com.johnri.labRatStudyCards.ui.debug.debugActivity"/>
+        <activity android:name="com.johnri.labRatStudyCards.ui.cards.studyCardListActivity"/>
+        <activity android:name="com.johnri.labRatStudyCards.ui.settings.settingsActivity"/>
+        <activity android:name="com.johnri.labRatStudyCards.ui.profile.profileSettingsActivity"/>
+        <activity android:name="com.johnri.labRatStudyCards.ui.settings.notificationSettingsActivity"/>
+        <activity android:name="com.johnri.labRatStudyCards.ui.settings.supportActivity"/>
+        <activity android:name="com.johnri.labRatStudyCards.ui.settings.changelogActivity"/>
+
+    </application>
+
+</manifest>
