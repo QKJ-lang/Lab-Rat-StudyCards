@@ -1,0 +1,74 @@
+=============================================
+MANUAL DE INSTALACIÓN DE LAB RAT - STUDYCARDS
+by John Alexander Ronduen Ignacio
+=============================================
+
+### Requisitos mínimos ###
+
+Hardware
+- Ordenador con al menos 8 GB de memoria RAM.
+- Procesador compatible con virtualización para emuladores Android.
+- Espacio libre mínimo de 5 GB.
+Software
+- Sistema operativo Windows 10/11, Linux o macOS.
+- Android Studio Hedgehog o superior.
+- JDK 17.
+- SDK Android actualizado.
+- Gradle integrado en Android Studio.
+- Dispositivo Android físico o emulador Android.
+Requisitos del dispositivo móvil
+- Android 8.0 (API 26) o superior.
+- Permisos de almacenamiento y notificaciones.
+
+### Instalación del proyecto ###
+
+Paso 1:  El proyecto debe descargarse o clonarse desde el repositorio correspondiente.
+
+Paso 2: Abrir el proyecto:
+- Abrir Android Studio → Seleccionar “Open Project” → Elegir la carpeta raíz del proyecto → Esperar a que Gradle sincronice automáticamente las dependencias.
+
+### Configuración inicial ###
+
+Una vez abierto el proyecto, Android Studio descargará automáticamente:
+
+Dependencias Gradle.
+Librerías AndroidX.
+Room Database.
+Material Components.
+WorkManager.
+
+· Error de sincronización:
+
+Abrir el menú “File” → Seleccionar “Sync Project with Gradle Files”.
+
+### Ejecución de la aplicación ###
+
+· Mediante emulador Android: Abrir “Device Manager” → Crear un dispositivo virtual → Iniciar el emulador → Pulsar el botón “Run”.
+
+· Mediante dispositivo físico: Activar las opciones de desarrollador → Habilitar “Depuración USB” → Conectar el dispositivo al ordenador → Ejecutar la aplicación desde Android Studio.
+
+### Base de datos local ###
+
+La aplicación utiliza Room Database para almacenar la información localmente.
+
+Las tablas principales creadas automáticamente son:
+
+- decks
+- chapters
+- study_cards
+- users
+
+No es necesario realizar configuraciones manuales adicionales sobre la base de datos.
+
+### Configuración de notificaciones ##
+
+La aplicación solicita permisos de notificaciones en dispositivos Android 13 o superiores.
+
+Para habilitarlas: Abrir la aplicación → Acceder a Ajustes-Notificaciones → Activar los recordatorios de estudio → Seleccionar hora y frecuencia.
+
+### Posibles errores y soluciones ###
+
+Error de Gradle → Sincronizar proyecto nuevamente
+Emulador no inicia → Verificar virtualización BIOS
+Notificaciones no aparecen → Revisar permisos Android
+Error Room Database → Limpiar y reconstruir proyecto

@@ -1,0 +1,80 @@
+=============================================
+LAB RAT - STUDYCARDS INSTALLATION MANUAL
+by John Alexander Ronduen Ignacio
+=============================================
+
+### Minimum Requirements ###
+
+Hardware
+- Computer with at least 8 GB of RAM.
+- Processor compatible with virtualization for Android emulators.
+- Minimum of 5 GB of free storage space.
+
+Software
+- Windows 10/11, Linux, or macOS operating system.
+- Android Studio Hedgehog or later.
+- JDK 17.
+- Updated Android SDK.
+- Gradle integrated into Android Studio.
+- Physical Android device or Android emulator.
+
+Mobile Device Requirements
+- Android 8.0 (API 26) or later.
+- Storage and notification permissions.
+
+### Project Installation ###
+
+Step 1:
+The project must be downloaded or cloned from the corresponding repository.
+
+Step 2: Open the project
+- Open Android Studio → Select “Open Project” → Choose the project’s root folder → Wait for Gradle to automatically sync the dependencies.
+
+### Initial Setup ###
+
+Once the project is opened, Android Studio will automatically download:
+
+- Gradle dependencies
+- AndroidX libraries
+- Room Database
+- Material Components
+- WorkManager
+
+· Synchronization Error:
+
+Open the “File” menu → Select “Sync Project with Gradle Files”.
+
+### Running the Application ###
+
+· Using an Android Emulator:
+Open “Device Manager” → Create a virtual device → Start the emulator → Press the “Run” button.
+
+· Using a Physical Device:
+Enable Developer Options → Enable “USB Debugging” → Connect the device to the computer → Run the application from Android Studio.
+
+### Local Database ###
+
+The application uses Room Database to store information locally.
+
+The main tables automatically created are:
+
+- decks
+- chapters
+- study_cards
+- users
+
+No additional manual database configuration is required.
+
+### Notification Settings ###
+
+The application requests notification permissions on Android 13 devices or later.
+
+To enable them:
+Open the application → Go to Settings - Notifications → Enable study reminders → Select time and frequency.
+
+### Possible Errors and Solutions ###
+
+Gradle Error → Sync the project again
+Emulator does not start → Verify BIOS virtualization
+Notifications do not appear → Check Android permissions
+Room Database Error → Clean and rebuild the project

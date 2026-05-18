@@ -1,0 +1,107 @@
+=============================================
+LAB RAT - STUDYCARDS USER MANUAL
+by John Alexander Ronduen Ignacio
+=============================================
+
+### Login and Registration ###
+
+When launching the application for the first time, the user can:
+
+- Create an account.
+- Log in.
+- Access previously saved decks.
+
+User data is stored locally using SharedPreferences and Room.
+
+### Main Screen ###
+
+Displays all created study decks. Available functions:
+
+- Create deck.
+- Delete deck.
+- Access chapters.
+- Start quick study.
+
+If no content exists, a message saying “Let’s get started” will appear.
+
+### Creating Decks ###
+
+To create a deck:
+Press the “Create Deck” button → Enter the deck name → Confirm creation
+
+The deck will automatically appear on the main screen.
+
+### Chapter Management ###
+
+Inside each deck, it is possible to create chapters, view the number of cards, access cards, and study the entire deck.
+
+### Adding Cards ###
+
+- Cards can be created manually without requiring a CSV file.
+
+	Process:
+	Access a chapter → Press “Add Card” → Enter question and answer → Save changes
+
+CSV Import
+
+- The application allows bulk card import.
+
+	Required format: question,answer,chapter
+
+	Steps:
+	Go to “Import Deck” → Select CSV file → Choose destination deck → Confirm import → The application will automatically generate chapters and cards.
+
+### Studying with Spaced Repetition ###
+
+To start a session:
+
+Select a chapter or deck → Press “Study” → Read the question → Show answer → Select rating:
+
+✘✘ - Repeat, very poor
+✘ - Poor, incorrect
+✔ - Good, correct
+✔✔ - Easy, memorized
+
+The system will automatically update the future review frequency.
+
+### Quick Study ###
+
+The “Quick Study” option generates a random session of 30 cards.
+This mode is intended for quick review sessions.
+
+### Statistics ###
+
+From the user profile, the following can be viewed:
+
+- Pending cards.
+- Cards reviewed today.
+- Cards reviewed this week.
+
+### Settings ###
+
+In the settings screen, the user can:
+
+- Modify name and email.
+- Change password.
+- Configure notifications.
+- View FAQ.
+- Read the changelog.
+
+### Notifications ###
+
+The application can send automatic study reminders.
+
+To configure them:
+Open Settings → Enter Notifications → Enable reminders → Choose frequency and time
+
+### Data Deletion ###
+
+From Profile Settings, the user can delete all their decks.
+The application will request confirmation before deletion.
+
+### Usage Recommendations ###
+
+- Study daily to take advantage of spaced repetition.
+- Keep chapters organized.
+- Use CSV import for large quantities of cards.
+- Enable notifications to improve study consistency.

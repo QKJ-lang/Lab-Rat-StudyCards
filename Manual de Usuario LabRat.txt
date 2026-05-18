@@ -1,0 +1,100 @@
+=============================================
+MANUAL DE USUARIO LAB RAT - STUDYCARDS
+by John Alexander Ronduen Ignacio
+=============================================
+
+### Inicio de sesión y registro ###
+
+Al iniciar la aplicación por primera vez, el usuario puede:
+
+- Crear una cuenta.
+- Iniciar sesión.
+- Acceder a sus mazos previamente guardados.
+
+Los datos del usuario se almacenan localmente mediante SharedPreferences y Room.
+
+### Pantalla principal ###
+
+Muestra todos los mazos de estudio creados. Funciones disponibles:
+
+- Crear mazo.
+- Eliminar mazo.
+- Acceder a capítulos.
+- Iniciar estudio rápido.
+
+En caso de no existir contenido, aparece un mensaje indicando “Empecemos”.
+
+### Creación de mazos ### 
+
+Para crear un mazo: Pulsar el botón “Crear mazo” → Introducir el nombre del mazo → Confirmar la creación
+
+El mazo aparecerá automáticamente en la pantalla principal.
+
+### Gestión de capítulos ###
+
+Dentro de cada mazo es posible crear capítulos, visualizar número de tarjetas, acceder a tarjetas y estudiar todo el mazo.
+
+### Añadir tarjetas ###
+
+- Las tarjetas pueden crearse manualmente, sin csv necesario.
+	
+	Proceso:
+	Acceder a un capítulo → Pulsar “Añadir tarjeta” → Introducir pregunta y respuesta → Guardar cambios
+	Importación CSV
+
+- La aplicación permite importar tarjetas masivamente.
+
+	Formato requerido: pregunta,respuesta,capitulo
+	Pasos:
+	Acceder a “Importar mazo” → Seleccionar archivo CSV → Elegir mazo destino → Confirmar importación → La 	aplicación generará automáticamente capítulos y tarjetas.
+
+### Estudio mediante repetición espaciada ###
+
+Para comenzar una sesión:
+
+Seleccionar un capítulo o mazo → Pulsar “Estudiar” → Leer la pregunta → Mostrar respuesta → Seleccionar valoración:
+✘✘ - Repite, muy mal
+✘ - Mal, equivocado
+✔ - Bien, acertado
+✔✔ - Fácil, memorizado
+
+El sistema actualizará automáticamente la frecuencia futura de revisión.
+
+### Estudio rápido ###
+
+La opción “Estudio rápido” genera una sesión aleatoria de 30 cartas.
+Esta modalidad está orientada a repasos rápidos.
+
+### Estadísticas ###
+
+Desde el perfil del usuario pueden consultarse:
+
+- Cartas pendientes.
+- Cartas revisadas hoy.
+- Cartas revisadas esta semana.
+- Ajustes
+
+En la pantalla de ajustes el usuario puede:
+
+- Modificar nombre y correo.
+- Cambiar contraseña.
+- Configurar notificaciones.
+- Consultar FAQ.
+- Leer el changelog.
+
+### Notificaciones ###
+
+La aplicación puede enviar recordatorios automáticos de estudio.
+
+Para configurarlos: Abrir Ajustes → Entrar en Notificaciones → Activar recordatorios → Elegir frecuencia y hora
+
+### Eliminación de datos ###
+
+Desde Ajustes de perfil el usuario puede eliminar todos sus mazos. La aplicación solicitará confirmación antes de realizar el borrado.
+
+### Recomendaciones de uso ###
+
+- Estudiar diariamente para aprovechar la repetición espaciada.
+- Mantener organizados los capítulos.
+- Utilizar importación CSV para grandes cantidades de tarjetas.
+- Activar notificaciones para mejorar la constancia de estudio.
