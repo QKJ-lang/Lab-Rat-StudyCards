@@ -32,7 +32,7 @@ class importDeckActivity : AppCompatActivity() {
     private val pickFile = registerForActivityResult(ActivityResultContracts.GetContent()) { uri ->
         uri?.let {
             selectedUri = it
-            findViewById<TextView>(R.id.tvFileName).text = "Archivo seleccionado"
+            findViewById<TextView>(R.id.tvFileName).text = "✔ ¡Archivo seleccionado!"
         }
     }
 
