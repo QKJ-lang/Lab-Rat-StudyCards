@@ -37,12 +37,15 @@
         android:contentDescription="Editar deck"
         app:layout_constraintTop_toTopOf="@id/tvDeckTitle"
         app:layout_constraintBottom_toBottomOf="@id/tvDeckTitle"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/secondaryColor"
+        />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnCreateChapter"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         android:text="Crear capítulo"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="12dp"
@@ -50,6 +53,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:background="@drawable/card_bg"
+        android:backgroundTint="@color/secondaryColor"
         />
 
     <Button
