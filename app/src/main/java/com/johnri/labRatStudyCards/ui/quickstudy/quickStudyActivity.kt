@@ -2,6 +2,7 @@ package com.johnri.labRatStudyCards.ui.quickstudy
 
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -17,6 +18,7 @@ class quickStudyActivity : AppCompatActivity() {
 
     private lateinit var tvCard: TextView
     private lateinit var buttonsLayout: View
+    private lateinit var imgTwist: ImageView
 
     private var showingAnswer = false
     private var currentCard: studyCardEntity? = null
@@ -35,6 +37,7 @@ class quickStudyActivity : AppCompatActivity() {
 
         tvCard = findViewById(R.id.tvCard)
         buttonsLayout = findViewById(R.id.layoutButtons)
+        imgTwist = findViewById(R.id.imgTwist)
 
         val db = appDatabase.getDatabase(this)
         val repository = studyCardRepository(db.studyCardDao())
@@ -74,11 +77,12 @@ class quickStudyActivity : AppCompatActivity() {
             val card = currentCard ?: return@setOnClickListener
 
             showingAnswer = !showingAnswer
-            buttonsLayout.visibility = if (showingAnswer) View.VISIBLE else View.GONE
+            buttonsLayout.visibility = if (showingAnswer) View.VISIBLE else View.INVISIBLE
+            imgTwist.visibility = if (showingAnswer) View.INVISIBLE else View.VISIBLE
 
             tvCard.animate()
                 .rotationY(90f)
-                .setDuration(90)
+                .setDuration(70)
                 .withEndAction {
 
                     tvCard.text = if (showingAnswer) card.answer else card.question
@@ -87,7 +91,7 @@ class quickStudyActivity : AppCompatActivity() {
 
                     tvCard.animate()
                         .rotationY(0f)
-                        .setDuration(90)
+                        .setDuration(70)
                         .start()
                 }
                 .start()

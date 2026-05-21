@@ -2,6 +2,7 @@ package com.johnri.labRatStudyCards.ui.study
 
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -17,6 +18,7 @@ class studyActivity : AppCompatActivity() {
     private lateinit var viewModel: studyViewModel
 
     private lateinit var tvCard: TextView
+    private lateinit var imgTwist: ImageView
     private lateinit var buttonsLayout: View
 
     private var showingAnswer = false
@@ -36,6 +38,7 @@ class studyActivity : AppCompatActivity() {
 
         tvCard = findViewById(R.id.tvCard)
         buttonsLayout = findViewById(R.id.layoutButtons)
+        imgTwist = findViewById(R.id.imgTwist)
 
         val db = appDatabase.getDatabase(this)
         val repository = studyCardRepository(db.studyCardDao())
@@ -88,11 +91,28 @@ class studyActivity : AppCompatActivity() {
             val card = currentCard ?: return@setOnClickListener
 
             showingAnswer = !showingAnswer
-            buttonsLayout.visibility = if (showingAnswer) View.VISIBLE else View.GONE
+            buttonsLayout.visibility = if (showingAnswer) View.VISIBLE else View.INVISIBLE
+            imgTwist.visibility = if (showingAnswer) View.INVISIBLE else View.VISIBLE
+            if (showingAnswer) {
+                imgTwist.animate()
+                    .alpha(0f)
+                    .setDuration(50)
+                    .withEndAction {
+                        imgTwist.visibility = View.INVISIBLE
+                    }
+                    .start()
+            } else {
+                imgTwist.visibility = View.VISIBLE
+                imgTwist.alpha = 0f
+                imgTwist.animate()
+                    .alpha(1f)
+                    .setDuration(50)
+                    .start()
+            }
 
             tvCard.animate()
                 .rotationY(90f)
-                .setDuration(90)
+                .setDuration(70)
                 .withEndAction {
 
                     val html = if (showingAnswer) card.answer else card.question
@@ -106,7 +126,7 @@ class studyActivity : AppCompatActivity() {
 
                     tvCard.animate()
                         .rotationY(0f)
-                        .setDuration(90)
+                        .setDuration(70)
                         .start()
                 }
                 .start()

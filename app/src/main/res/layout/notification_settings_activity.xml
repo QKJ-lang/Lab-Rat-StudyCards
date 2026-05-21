@@ -30,6 +30,7 @@
             android:text="Activar notificaciones"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="20dp"
             />
 
         <TextView
@@ -37,14 +38,17 @@
             android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="16dp"
             />
 
         <Button
             android:id="@+id/btnPickTime"
             android:text="Seleccionar hora"
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/card_bg"
+            android:textSize="16dp"
             />
 
         <TextView
@@ -52,12 +56,15 @@
             android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="20dp"
             />
 
         <Spinner
             android:id="@+id/spinnerFrequency"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:layout_marginTop="20dp"
             />
 
     </LinearLayout>
