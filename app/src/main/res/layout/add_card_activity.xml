@@ -29,44 +29,46 @@
             android:orientation="horizontal"
             android:padding="8dp">
 
-            <androidx.appcompat.widget.AppCompatButton
+            <Button
                 android:id="@+id/btnBold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="B"
                 android:layout_marginHorizontal="6dp"
-                style="@style/CustomButton"
-                android:backgroundTint="@null"
+                android:text="B"
+                app:cornerRadius="16dp"
+                android:textColor="@color/white"
+
                 />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <Button
                 android:id="@+id/btnItalic"
                 android:text="I"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="6dp"
-                style="@style/CustomButton"
-                android:backgroundTint="@null"
+                app:cornerRadius="16dp"
+                android:textColor="@color/white"
+
                 />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <Button
                 android:id="@+id/btnUnderline"
                 android:text="U"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="6dp"
-                style="@style/CustomButton"
-                android:backgroundTint="@null"
+                app:cornerRadius="16dp"
+                android:textColor="@color/white"
                 />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <Button
                 android:id="@+id/btnBullet"
                 android:text="•"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="6dp"
-                style="@style/CustomButton"
-                android:backgroundTint="@null"
+                app:cornerRadius="16dp"
+                android:textColor="@color/white"
                 />
 
         </LinearLayout>

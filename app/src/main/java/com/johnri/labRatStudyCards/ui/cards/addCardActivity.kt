@@ -18,6 +18,7 @@ import com.johnri.labRatStudyCards.viewmodel.addCardViewModel.addCardViewModelFa
 import com.johnri.labRatStudyCards.viewmodel.addCardViewModel.addCardViewModel
 import jp.wasabeef.richeditor.RichEditor
 import androidx.lifecycle.lifecycleScope
+import com.google.android.material.button.MaterialButton
 import com.johnri.labRatStudyCards.data.repository.chapterRepository
 import kotlinx.coroutines.launch
 
@@ -75,20 +76,54 @@ class addCardActivity : AppCompatActivity() {
         if (selectedChapterId == -1) selectedChapterId = null
 
         // Botones formato
-        findViewById<Button>(R.id.btnBold).setOnClickListener {
+
+        val bold = findViewById<Button>(R.id.btnBold)
+        val italic = findViewById<Button>(R.id.btnItalic)
+        val underline = findViewById<Button>(R.id.btnUnderline)
+        val bullet = findViewById<Button>(R.id.btnBullet)
+
+        findViewById<MaterialButton>(R.id.btnBold).setOnClickListener {
+            bold.isSelected = !bold.isSelected
             activeEditor?.setBold()
+            bold.setBackgroundColor(
+                if (bold.isSelected)
+                    getColor(R.color.primaryAccentColor)
+                else
+                    getColor(R.color.primaryColor)
+            )
         }
 
-        findViewById<Button>(R.id.btnItalic).setOnClickListener {
+        findViewById<MaterialButton>(R.id.btnItalic).setOnClickListener {
+            italic.isSelected = !italic.isSelected
             activeEditor?.setItalic()
+            italic.setBackgroundColor(
+                if (italic.isSelected)
+                    getColor(R.color.primaryAccentColor)
+                else
+                    getColor(R.color.primaryColor)
+            )
         }
 
-        findViewById<Button>(R.id.btnUnderline).setOnClickListener {
+        findViewById<MaterialButton>(R.id.btnUnderline).setOnClickListener {
+            underline.isSelected = !underline.isSelected
             activeEditor?.setUnderline()
+            underline.setBackgroundColor(
+                if (underline.isSelected)
+                    getColor(R.color.primaryAccentColor)
+                else
+                    getColor(R.color.primaryColor)
+            )
         }
 
-        findViewById<Button>(R.id.btnBullet).setOnClickListener {
+        findViewById<MaterialButton>(R.id.btnBullet).setOnClickListener {
+            bullet.isSelected = !bullet.isSelected
             activeEditor?.setBullets()
+            bullet.setBackgroundColor(
+                if (bullet.isSelected)
+                    getColor(R.color.primaryAccentColor)
+                else
+                    getColor(R.color.primaryColor)
+            )
         }
 
         // Guardar
