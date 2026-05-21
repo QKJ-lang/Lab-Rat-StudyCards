@@ -6,6 +6,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.core.text.HtmlCompat
 import com.johnri.labRatStudyCards.R
 import com.johnri.labRatStudyCards.data.database.appDatabase
 import com.johnri.labRatStudyCards.data.entity.studyCardEntity
@@ -78,18 +79,32 @@ class quickStudyActivity : AppCompatActivity() {
 
             showingAnswer = !showingAnswer
             buttonsLayout.visibility = if (showingAnswer) View.VISIBLE else View.INVISIBLE
-            imgTwist.visibility = if (showingAnswer) View.INVISIBLE else View.VISIBLE
+
 
             tvCard.animate()
                 .rotationY(90f)
                 .setDuration(70)
+
+            imgTwist.animate()
+                .rotationY(90f)
+                .setDuration(70)
                 .withEndAction {
 
-                    tvCard.text = if (showingAnswer) card.answer else card.question
+                    val html = if (showingAnswer) card.answer else card.question
+
+                    tvCard.text = HtmlCompat.fromHtml(
+                        html,
+                        HtmlCompat.FROM_HTML_MODE_LEGACY
+                    )
 
                     tvCard.rotationY = -90f
+                    imgTwist.rotationY = -90f
 
                     tvCard.animate()
+                        .rotationY(0f)
+                        .setDuration(70)
+                        .start()
+                    imgTwist.animate()
                         .rotationY(0f)
                         .setDuration(70)
                         .start()
