@@ -93,22 +93,6 @@ class studyActivity : AppCompatActivity() {
             showingAnswer = !showingAnswer
             buttonsLayout.visibility = if (showingAnswer) View.VISIBLE else View.INVISIBLE
             imgTwist.visibility = if (showingAnswer) View.INVISIBLE else View.VISIBLE
-            if (showingAnswer) {
-                imgTwist.animate()
-                    .alpha(0f)
-                    .setDuration(50)
-                    .withEndAction {
-                        imgTwist.visibility = View.INVISIBLE
-                    }
-                    .start()
-            } else {
-                imgTwist.visibility = View.VISIBLE
-                imgTwist.alpha = 0f
-                imgTwist.animate()
-                    .alpha(1f)
-                    .setDuration(50)
-                    .start()
-            }
 
             tvCard.animate()
                 .rotationY(90f)
