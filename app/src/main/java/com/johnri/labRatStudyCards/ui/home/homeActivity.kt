@@ -5,9 +5,11 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.johnri.labRatStudyCards.R
 import com.johnri.labRatStudyCards.data.database.appDatabase
@@ -79,6 +81,10 @@ class homeActivity : AppCompatActivity() {
         ).setOnClickListener {
             quickStudy()
         }
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
+
+        supportActionBar?.title = "LabRat"
     }
 
     private fun quickStudy() {

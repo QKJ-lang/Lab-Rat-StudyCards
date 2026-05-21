@@ -60,34 +60,37 @@
             app:layout_constraintHorizontal_chainStyle="spread"
             app:layout_constraintTop_toBottomOf="@+id/btnWrong"
             android:background="@drawable/card_bg"
+            android:layout_marginVertical="8dp"
             android:textAllCaps="false"
             />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnWrong"
             android:layout_width="0dp"
             android:layout_height="64dp"
             android:text="✘"
             android:textSize="20dp"
-            android:paddingBottom="8dp"
+            android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@id/btnGood"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_margin="8dp"
-            android:backgroundTint="@color/color_wrong"
+            android:background="@drawable/card_wrong"
+            style="@style/Widget.AppCompat.Button"
             />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnGood"
             android:layout_width="0dp"
             android:layout_height="64dp"
             android:text="✔"
             android:textSize="20dp"
+            android:textColor="@color/white"
             app:layout_constraintStart_toEndOf="@id/btnWrong"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_margin="8dp"
-            android:backgroundTint="@color/color_good"
+            android:background="@drawable/card_good"
             />
 
 
@@ -102,6 +105,7 @@
             app:layout_constraintTop_toBottomOf="@+id/btnGood"
             android:background="@drawable/card_bg"
             android:textAllCaps="false"
+            android:layout_marginVertical="8dp"
             />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
