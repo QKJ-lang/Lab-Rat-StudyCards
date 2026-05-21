@@ -20,6 +20,7 @@ import com.johnri.labRatStudyCards.data.entity.studyCardEntity
 import com.johnri.labRatStudyCards.data.repository.chapterRepository
 import com.johnri.labRatStudyCards.data.repository.deckRepository
 import com.johnri.labRatStudyCards.data.repository.studyCardRepository
+import com.johnri.labRatStudyCards.ui.cards.addCardActivity
 import com.johnri.labRatStudyCards.ui.home.homeActivity
 import com.johnri.labRatStudyCards.ui.profile.profileActivity
 import kotlinx.coroutines.launch
@@ -105,7 +106,7 @@ class importDeckActivity : AppCompatActivity() {
             when (item.itemId) {
 
                 R.id.nav_home -> startActivity(Intent(this, homeActivity::class.java))
-                R.id.nav_add_card -> startActivity(Intent(this, homeActivity::class.java))
+                R.id.nav_add_card -> startActivity(Intent(this, addCardActivity::class.java))
                 R.id.nav_create_deck -> {}
                 R.id.nav_profile -> startActivity(Intent(this, profileActivity::class.java))
             }

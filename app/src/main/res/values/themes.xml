@@ -6,7 +6,6 @@
         <item name="colorSecondary">@color/secondaryColor</item>
         <item name="android:colorBackground">@color/backgroundColor</item>
     </style>
-
     <style name="CustomFabShape">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">16dp</item>
