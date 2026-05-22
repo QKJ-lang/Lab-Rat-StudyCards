@@ -10,6 +10,7 @@ import com.johnri.labRatStudyCards.ui.cards.addCardActivity
 import com.johnri.labRatStudyCards.ui.decks.importDeckActivity
 import com.johnri.labRatStudyCards.ui.home.homeActivity
 import com.johnri.labRatStudyCards.ui.profile.profileActivity
+import com.johnri.labRatStudyCards.ui.intro.introActivity
 
 class supportActivity : AppCompatActivity() {
 
@@ -18,6 +19,18 @@ class supportActivity : AppCompatActivity() {
         setContentView(R.layout.support_activity)
 
         val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
+
+        // Volver a ver intro
+
+        val tvIntro = findViewById<TextView>(R.id.tvIntro)
+
+        tvIntro.setOnClickListener {
+
+            val intent = Intent(this, introActivity::class.java)
+            intent.putExtra("from_help", true)
+
+            startActivity(intent)
+        }
 
         setSupportActionBar(toolbar)
 
